@@ -1,0 +1,167 @@
+/* RESETE DE ELEMENTOS PRINCIPAIS */
+* {padding: 0; margin: 0;}
+img {display: block;}
+li {list-style: none;}
+a {text-decoration: none;}
+
+/* ################################################################################################################################################## */
+/* MARCAÇÃO */
+.c-cabecalho {grid-area: c;}
+.c-navegacao {grid-area: n;}
+.c-conteudo {grid-area: m;}
+.c-newsletter {grid-area: l;}
+.c-info-adicionais {grid-area: a;}
+.c-rodape {grid-area: f;}
+
+body { background-color: rgb(66, 62, 62); font-family: 'Hind'; 
+    display: grid; min-height: 100vh; grid-template-columns: 250px repeat(4, 1fr) 250px; 
+    grid-template-rows: 200px 60px 1fr 100px 400px 50px; 
+    grid-template-areas: 'c'  'n'  'm'  'l'   'a'  'f';
+}
+
+
+/* ################################################################################################################################################## */
+.c-cabecalho, .c-navegacao, .c-banner, .c-conteudo, .c-newsletter, .c-info-adicionais, .c-rodape  {font-size: 20px; color: #fff; grid-column-start: 2; grid-column-end: 6;}
+
+
+/* ################################################################################################################################################## */
+/* CABEÇALHO */
+
+.c-cabecalho {background-color: #fff; display: grid; grid-template-columns: 400px 1fr; justify-content: space-between; align-items: center; height: 200px;}
+.c-cabecalho img {max-width: 300px; max-height: 300; width: auto; height: auto; margin-left: 10px;}
+.cabecalho-img {display: flex; justify-content: center;}
+.cabecalho-img a {border: 2px solid #000; border-radius: 5px; padding: 10px 8px 10px 0;}
+/* ------------------------------------------------------------------- */
+.cabecalho-elementos {display: flex; flex-direction: column; padding: auto; height: 100%;}
+/* ------------------------------------------------------------------- */
+.txt-contato {color: #000; height: 40px; font-size: 15px; font-weight: bolder; display: flex; justify-content: center; align-items: center;}
+.txt-contato .c-telefone-loja {width: 120px;}
+.txt-contato .c-email-loja {width: 280px;}
+.txt-contato a, .c-telefone-loja, .c-email-loja {padding: 5px 10px;}
+.txt-contato i {font-size: 18px; text-decoration: none; color: #000;}
+.c-telefone-loja {margin-right: 10px;}
+.c-email-loja {margin: 0 10px;}
+/* ------------------------------------------------------------------- */
+.form-cabecalho {height: 150px; display: flex; justify-content: center; align-items: center;}
+/* ------------------------------------------------------------------- */
+.barra-pequisa {width: 400px; height: 150px; display: flex; align-items: center; justify-content: center; padding-right: 50px;}
+.form-pesquisa {width: 400px;}
+.campo-pesquisa {background-color: rgb(255, 255, 255); border: 1px solid rgb(116, 178, 194); border-radius: 3px; width: 300px; height: 38px;}
+.btn-pesquisa {border: none; margin: auto; height: 40px; border-radius: 3px; width: 70px; font-weight: bold; background-color: skyblue;}
+/* ------------------------------------------------------------------- */
+.btns-login-cad {display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; padding-right: 18px; width: 110px; height: 100px; background-color: rgb(20, 73, 187); border-radius: 6px;}
+.btns-login-cad button {width: 115px; height: 35px; margin: 8px 0; font-family: 'Hind'; text-transform: uppercase; font-size: 20px; border-radius: 5px; border: none;}
+.btns-login-cad button:hover {background-color: rgb(78, 78, 78); color: #fff;}
+/* ------------------------------------------------------------------- */
+.div-carrinho {width: 120px; padding-left: 50px; display: flex; justify-content: center; align-items: center; padding: 10px 14px; padding-left: 80px;}
+.div-carrinho a {width: 120px; border: 2px solid; border-radius: 5px; display: flex; justify-content: center; align-items: center; padding: 8px 10px;}
+.carrinho-Compras > i {font-size: 20px; color: skyblue; padding-left: 5px;} 
+
+
+/* ################################################################################################################################################## */
+/* NAVEGAÇÃO */
+
+.c-navegacao {display: flex; justify-content: center; align-items: center; background-color: rgb(231, 145, 31);}
+/* ------------------------------------------------------------------- */
+.menu-options-1 {display: grid; grid-template-columns: repeat(6, 140px); grid-template-rows: 1fr;}
+.menu-options-1 {font-size: 15px;}
+/* ------------------------------------------------------------------- */
+.menu-principal a {padding: 10px 15px; cursor: pointer; border: none; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.menu-principal {position: relative; display: inline-block;}
+.menu-principal a, .menu-options-2 a {color: #000;  background-color: rgb(231, 145, 31);}
+.menu-principal:hover .menu-options-2 {display: block;}
+.menu-principal:hover > a {background-color: rgb(175, 121, 49)}
+/* ------------------------------------------------------------------- */
+.menu-options-2 {display: none; position: absolute; background-color: #f9f9f9; min-width: 140px; box-shadow: 0px 8px 8px rgba(0,0,0,0.2); z-index: 1;}
+
+.menu-options-2 li a {padding: 10px 0;  background-color: rgb(223, 140, 31); text-decoration: none; display: block; text-align: center;}
+.menu-options-2 a:hover {background-color: #e4a023;}
+
+
+/* ################################################################################################################################################## */
+/* CAMPO PRINCIPAL */
+
+.c-conteudo {padding: 10px 20px; background-color: #fff; color: rgb(66, 62, 62);}
+.c-conteudo legend, .title-cadastro {text-transform: uppercase; font-weight: bolder; margin: 0 5px;}
+/* ------------------------------------------------------------------- */
+.title-page {font-weight: bolder; font-size: 35px; text-transform: uppercase;}
+div.title-page::after {content: ""; display: block; border-bottom: 1px solid #CCC; padding-top: .5rem;}
+/* ------------------------------------------------------------------- */
+.div-cadastro {padding: 10px 20px; display: flex; justify-content: center; width: 100%;}
+/* ------------------------------------------------------------------- */
+.container-dados-acesso fieldset {width: 100%; padding: 20px 30px; border: 2px solid;}
+.elem-entrada {display: grid; grid-template-columns: 200px 1fr; width: 100%; justify-content: center; align-items: center;}
+
+/* ------------------------------------------------------------------- */
+.div-option {display: grid; grid-template-columns: 200px 1fr; align-items: center;}
+.control-label {display: flex; justify-content: flex-end;}
+/* ------------------------------------------------------------------- */
+.control-label i {margin-right: 5px; margin-top: 5px;}
+/* ------------------------------------------------------------------- */
+.input-cad-dados, .input-cad-dados-nome, .input-cad-dados-1, .input-cad-dados-dataN, .input-cad-dados-cep, .input-cad-dados-num, .input-cad-dados-2, .div-option select {font-size: 18px; color: #000; height: 30px; margin: 10px 0 20px 10px;}
+.input-cad-dados, .input-cad-dados-nome {width: 300px;}
+
+
+/* -> BOTÕES DO FORMULÁRIO <- */
+.btns-form {display: flex; justify-content: center; align-items: center; height: 40px;}
+.btns-form input {font-size: 20px;}
+.btn-submit {width: 120px;}
+.btn-clear {width: 180px;}
+.btn-submit, .btn-clear {margin: 0 10px; font-size: 18px; }
+.btns-form input:hover {background-color: rgba(143, 143, 143, 0.596);}
+
+
+/* ################################################################################################################################################## */
+/* NEWSLETTER */
+
+.c-newsletter {background-color: rgb(105, 105, 105); display: flex; justify-content: center; align-items: center;}
+.news-l-campo {display: flex; height: 55px; justify-content: space-between;}
+/* ------------------------------------------------------------------- */
+.news-l-msg {display: grid; grid-template-rows: repeat(2, 25px); width: 500px; }
+.news-l-msg > span {justify-content: center; align-items: center;}
+/* ------------------------------------------------------------------- */
+.msg-1 {font-size: 25px; font-weight: bolder;}
+/* ------------------------------------------------------------------- */
+.news-l-form {display: flex; align-items: center;}
+.news-l-form div {padding: 0 5px;}
+.news-l-form input, .news-l-form button {font-size: 15px;}
+.news-l-form button:hover {background-color: rgb(231, 145, 31);}
+/* ------------------------------------------------------------------- */
+.news-l-email {width: 350px; height: 45px; border: none; margin: auto; border-radius: 3px; font-size: 15px;}
+.news-l-btn {width: 130px; height: 45px; border: none; margin: auto; border-radius: 3px; font-weight: bold;}
+
+
+/* ################################################################################################################################################## */
+/* INF. ADICIONAIS */
+
+.c-info-adicionais {background-color: rgb(10, 63, 115); font-size: 15px;}
+.c-info-adicionais span {font-weight: bolder; font-size: 18px; justify-content: center;}
+/* ------------------------------------------------------------------- */
+.div-sobre-loja {display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+/* ------------------------------------------------------------------- */
+.campo-info-ad {display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px 200px; margin: 0 auto; justify-items: center; align-items: center;}
+.div-categorias li:hover, .div-conteudo li:hover {text-decoration: underline;}
+/* ------------------------------------------------------------------- */
+.div-band-pag > i {font-size: 30px;}
+.div-band-pag ul {display: flex; justify-content: space-around;}
+/* ------------------------------------------------------------------- */
+.div-categorias a, .div-conteudo a{text-decoration: none; color: #fff;}
+/* ------------------------------------------------------------------- */
+.div-band-pag li {display: flex; flex-direction: column; flex-wrap: wrap; padding: 0 5px; align-items: center;}
+/* ------------------------------------------------------------------- */
+.div-endereco {font-size: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+/* ------------------------------------------------------------------- */
+.icon-boleto {display: flex; border: 1px solid; border-radius: 8px; width: 112; justify-content: center;}
+.icon-boleto span {padding: 0 3px 0 3px; margin-top: 7px;}
+.icon-boleto i {padding: 0 3px 0 3px;}
+
+/* ################################################################################################################################################## */
+/* RODAPÉ */
+
+.c-rodape {background-color: skyblue; display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.c-copyright {font-size: 15px; color: #000; font-weight: bolder; align-items: center;}
+
+
+/* ################################################################################################################################################## */
+/* MEDIA QUERY */
+/* @media */

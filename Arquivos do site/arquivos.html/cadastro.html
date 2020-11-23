@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/estilo-pag-cadastro.css">
+    <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet'>
+    <script src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <title>Soares & Galvão - A papelaria inteligente que acompanha você!</title>  
+</head>
+
+<body class="container">
+    <!-- CABECALHO -->
+    <header class="c-cabecalho">
+        <div class="cabecalho-img">
+            <a href="/arquivos.html/modelo-pagina-principal.html">
+                <img src="../img/Soares e Galvão - Papelaria 1 (1).jpg" width="280" height="280">
+            </a>
+        </div>
+        <div class="cabecalho-elementos">
+            <!-- INFORMAÇÕES DE CONTATO -->
+            <div class="txt-contato">
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WHATSAPP: (11) 92222-5555</span>
+                </a>
+                <div class="c-telefone-loja">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>(11) 2222-4444</span>
+                </div>
+                <div class="c-email-loja">
+                    <i class="fas fa-envelope-square"></i>
+                    <span>soares&galvaopapelaria@email.com.br</span>
+                </div>
+                <a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <!-- FORMULÁRIO DE INTERAÇÃO DO NAVEGADOR -->
+            <div class="form-cabecalho">
+
+                <div class="barra-pequisa">
+                    <form class="form-pesquisa">
+                        <input class="campo-pesquisa" type="text" placeholder="O que você está buscando?">
+                        <button class="btn-pesquisa">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="btns-login-cad">
+                    <button class="btn-login">login</button>
+                    <a href="/arquivos.html/cadastro.html">
+                        <button class="btn-cad">Cadastro</button>
+                    </a>
+                </div>
+
+                <div class="div-carrinho">
+                    <a href="#" class="carrinho-Compras">
+                        <span>Meu Carrinho</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- NAVEGAÇÃO -->
+    <nav class="c-navegacao">
+        <div class="menu-options-1">
+
+            <div class="menu-principal">
+                <a href="#">PAPELARIA</a>
+                <ul class="menu-options-2">
+                    <li><a href="#">Canetas</a></li>
+                    <li><a href="#">Cadernos</a></li>
+                    <li><a href="#">Colas</a></li>
+                    <li><a href="#">Corretivos</a></li>
+                    <li><a href="#">Lápis de cor</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-principal">
+                <a href="#">SERVIÇOS</a>
+                <ul class="menu-options-2">
+                    <li><a href="#">Elaboração de currículo</a></li>
+                    <li><a href="#">Auxílio para emitir documentos</a></li>
+                    <li><a href="#">Impressão de arquivos</a></li>
+                    <li><a href="#">Impressão de banners</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-principal">
+                <a href="#">KITS</a>
+                <ul class="menu-options-2">
+                    <li><a href="#">###################</a></li>
+                    <li><a href="#">@@@@@@@@@@@@@@@@@@@</a></li>
+                    <li><a href="#">8888888888888888888</a></li>
+                    <li><a href="#">*******************</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-principal">
+                <a href="#">PROMOÇÕES</a>
+                <ul class="menu-options-2">
+                    <li><a href="#">11111111111111</a></li>
+                    <li><a href="#">22222222222222</a></li>
+                    <li><a href="#">33333333333333</a></li>
+                    <li><a href="#">444444444444444</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-principal">
+                <a href="#">ILUSTRAÇÕES</a>
+            </div>
+
+            <div class="menu-principal">
+                <a href="#">MODELOS</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- CONTEÚDO -->
+    <main class="c-conteudo">
+
+        <div class="title-page">CADASTRO</div>
+
+        <div class="div-cadastro">
+            <div class="container-dados-acesso">
+
+                <fieldset>
+                    <!-- TÍTULO DO CAMPO -->
+                    <legend> <i class="fas fa-user"></i> Dados para Acesso</legend>
+
+                    <div class="linha-entradas-login">
+                        <!-- ENTRADA DE E-MAIL -->
+                        <div class="elem-entrada">
+                            <label for="id-email" class="control-label">
+                                <i class="fas fa-envelope"></i> E-mail:
+                            </label>
+                            <input id="id-email" type="text" class="input-cad-dados" name="email"
+                                placeholder="Digite o seu e-mail" value="" maxlength="130"
+                                onchange="validarEmail($('#id-conf-email').val(), $('#id-conf-email').attr('id'))">
+                        </div>
+                        <!-- CONFIRMAÇÃO DE E-MAIL -->
+                        <div class="elem-entrada">
+                            <label for="id-conf-email" class="control-label">
+                                Confirmar e-mail:
+                            </label>
+                            <input id="id-conf-email" type="text" class="input-cad-dados" name="confirma-email"
+                                onchange="validarEmail($(this).val(), $(this).attr('id'))">
+                        </div>
+
+                    </div>
+
+                    <div class="linha-entradas-login">
+                        <!-- ENTRADA DE SENHA -->
+                        <div class="elem-entrada">
+                            <label for="id-senha" class="control-label">
+                                <i class="fas fa-lock"></i> Crie uma senha:
+                            </label>
+                            <input id="id-senha" type="password" class="input-cad-dados" name="senha"
+                                placeholder="Digite uma senha" maxlength="32"
+                                onchange="qtdCaracteresSenha($(this).val(), $(this).attr('id'))">
+                        </div>
+                        <!-- CONFIRMAÇÃO DE SENHA -->
+                        <div class="elem-entrada">
+                            <label for="id-conf-senha" class="control-label">
+                                Confirmar senha:
+                            </label>
+                            <input id="id-conf-senha" type="password" class="input-cad-dados" maxlength="32"
+                                name="conf-senha" onchange="validarSenha($(this).val(), $(this).attr('id'))">
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="div-cadastro-2">
+            <!-- DADOS PESSOAIS -->
+            <div class="div-dados-pessoais">
+                <fieldset class="form-horizontal">
+                    <!-- TÍTULO DO CAMPO -->
+                    <legend class="title-cadastro">
+                        <i class="fas fa-list"></i> Dados Pessoais
+                    </legend>
+                    <!-- ENTRADA DE NOME COMPLETO -->
+                    <div class="div-option">
+                        <label for="id-nome" class="control-label">Nome completo:</label>
+                        <div class="control-div">
+                            <input id="id-nome" type="text" class="input-cad-dados-nome" name="nome" maxlength="150"
+                                spellcheck="false" autocomplete="off"
+                                onchange="verificarStringCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE CPF -->
+                    <div class="div-option">
+                        <label for="id-cpf" class="control-label">CPF:</label>
+                        <div class="control-div">
+                            <input id="id-cpf" type="tel" class="input-cad-dados-1" name="CPF" maxlength="11"
+                                spellcheck="false" autocomplete="off"
+                                onchange="validarCPF($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE CELULAR -->
+                    <div class="div-option">
+                        <label for="id-tel-celular" class="control-label">Celular:</label>
+                        <div class="control-div">
+                            <input id="id-tel-celular" type="tel" class="input-cad-dados-1" name="telefone-celular"
+                                maxlength="11" spellcheck="false" autocomplete="off"
+                                onchange="verificarNumeroCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE TELEFONE FIXO -->
+                    <div class="div-option">
+                        <label for="id-tel-fixo" class="control-label">Telefone fixo:</label>
+                        <div class="control-div">
+                            <input id="id-tel-fixo" type="tel" class="input-cad-dados-1" name="telefone-fixo"
+                                maxlength="11" spellcheck="false" autocomplete="off"
+                                onchange="verificarNumeroCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE GENERO -->
+                    <div class="div-option">
+                        <label for="id-sexo" class="control-label">Sexo:</label>
+                        <div class="control-div">
+                            <select class="input-cad-dados-1" name="sexo" id="id-sexo">
+                                <option selected="selected">- Selecione -</option>
+                                <option value="m">Masculino</option>
+                                <option value="f">Feminino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE DATA DE NASCIMENTO -->
+                    <div class="div-option">
+                        <label for="id-data-nasc" class="control-label">Data de Nascimento:</label>
+                        <div class="control-div">
+                            <input id="id-data-nasc" type="date" class="input-cad-dados-dataN" name="data-nascimento"
+                                maxlength="10" spellcheck="false" autocomplete="off">
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- BOTÕES DO FORMULÁRIO -->
+                <div class="btns-form">
+                    <input type="submit" class="btn-submit" name="botao-enviar" onclick="enviarDados()"></input>
+                    <input type="reset" class="btn-clear" name="botao-limpar"></input>
+                </div>
+            </div>
+
+            <!-- ENDEREÇO -->
+            <div class="div-endereco">
+                <fieldset class="form-horizontal">
+
+                    <legend class="title-cadastro">
+                        <i class="fas fa-map-marker-alt"></i> Endereço
+                    </legend>
+                    <!-- ENTRADA DE CEP -->
+                    <div class="div-option">
+                        <label for="id-cep" class="control-label">CEP:</label>
+                        <div class="control-div-cep">
+                            <input id="id-cep" type="text" class="input-cad-dados-cep" name="cep" maxlength="9"
+                                spellcheck="false" autocomplete="off"
+                                onchange="verificarNumeroCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                            <span>
+                                <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t"
+                                    title="Buscar cep nos correios" target="_blank">
+                                    <i class="fas fa-question-circle"></i> Não sei meu cep
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE ENDEREÇO -->
+                    <div class="div-option">
+                        <label for="id-endereco" class="control-label">Endereço:</label>
+                        <div class="control-div">
+                            <input id="id-endereco" type="text" class="input-cad-dados-2" name="endereco"
+                                maxlength="200"
+                                onchange="verificarStringCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE NÚMERO DE ENDEREÇO -->
+                    <div class="div-option">
+                        <label for="id-endereco-num" class="control-label">Número:</label>
+                        <div class="control-div">
+                            <input id="id-endereco-num" type="text" class="input-cad-dados-num" name="numero-endereco"
+                                maxlength="6"
+                                onchange="verificarNumeroCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE COMPLEMENTO -->
+                    <div class="div-option">
+                        <label for="id-complemento" class="control-label">Complemento:</label>
+                        <div class="control-div">
+                            <input id="id-complemento" type="text" class="input-cad-dados-2" name="complemento"
+                                maxlength="30"
+                                onchange="verificarStringCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE REFERÊNCIA -->
+                    <div class="div-option">
+                        <label for="id-referencia" class="control-label">Referência:</label>
+                        <div class="control-div">
+                            <input id="id-referencia" type="text" class="input-cad-dados-2" name="referencia"
+                                maxlength="200"
+                                onchange="verificarStringCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE BAIRRO -->
+                    <div class="div-option">
+                        <label for="id-bairro" class="control-label">Bairro:</label>
+                        <div class="control-div">
+                            <input id="id-bairro" type="text" class="input-cad-dados-2" name="bairro" maxlength="130"
+                                onchange="verificarStringCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE CIDADE -->
+                    <div class="div-option">
+                        <label for="id-cidade" class="control-label">Cidade:</label>
+                        <div class="control-div">
+                            <input id="id-cidade" type="text" class="input-cad-dados-2" name="cidade" maxlength="130"
+                                onchange="verificarStringCaixa($(this).val(), $(this).attr('id'), $(this).attr('name'))">
+                        </div>
+                    </div>
+                    <!-- ENTRADA DE ESTADO   -->
+                    <div class="div-option">
+                        <label for="id-estado" class="control-label">Estado:</label>
+                        <div class="control-div">
+                            <select id="id-estado" name="estado" maxlength="2">
+                                <option> - Selecione - </option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- NEWSLETTER -->
+    <div class="c-newsletter">
+        <div class="news-l-campo">
+            <div class="news-l-msg">
+                <span class="msg-1">RECEBA OFERTAS EXCLUSIVAS</span>
+                <span class="msg-2">Cadastre-se e receba diretamente em seu e-mail.</span>
+            </div>
+            <div class="news-l-form">
+                <div>
+                    <input class="news-l-email" type="email" name="email" placeholder="DIGITE SEU E-MAIL">
+                </div>
+                <div>
+                    <button class="news-l-btn">
+                        CADASTRAR <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- INF. ADICIONAIS -->
+    <nav class="c-info-adicionais">
+        <div class="campo-info-ad">
+            <div class="div-sobre-loja">
+                <span class="title-sobre">SOBRE A LOJA</span>
+                <p>
+                    Papelaria inteligente que acompanha você! Comercializamos uma grande variedade de
+                    produtos de papelaria, como canetas, corretivos, tesouras, cadernos; e oferecemos
+                    serviços de atendimento online e presencial.
+                </p>
+            </div>
+            <div class="div-categorias">
+                <span class="title-categorias">CATEGORIAS</span>
+                <ul>
+                    <li><a href="#">PAPELARIA</a></li>
+                    <li><a href="#">SERVIÇOS</a></li>
+                    <li><a href="#">KITS</a></li>
+                    <li><a href="#">PROMOÇÕES</a></li>
+                </ul>
+            </div>
+            <div class="div-conteudo">
+                <span class="title-conteudo">CONTEÚDO</span>
+                <ul>
+                    <li><a href="#">FALE CONOSCO</a></li>
+                    <li><a href="#">SOBRE A SOARES & GALVÃO</a></li>
+                    <li><a href="#">POLÍTICA DE PRIVACIDADE E SEGURANÇA</a></li>
+                    <li><a href="#">TROCAS E DEVOLUÇÕES</a></li>
+                </ul>
+            </div>
+            <div class="div-band-pag">
+                <span class="title-bande-pag">PAGUE COM</span>
+                <ul>
+                    <li><i class="fab fa-cc-diners-club fa-3x"></i></li>
+                    <li><i class="fab fa-cc-mastercard fa-3x"></i></li>
+                    <li><i class="fab fa-cc-paypal fa-3x"></i></li>
+                    <li><i class="fab fa-cc-visa fa-3x"></i></li>
+                    <li><i class="fab fa-cc-amex fa-3x"></i></li>
+                    <div class="icon-boleto">
+                        <span>Boleto</span>
+                        <i class="fas fa-barcode fa-3x"></i>
+                    </div>
+                </ul>
+            </div>
+            <div class="div-endereco">
+                <div>
+                    <span>Endereço: </span>
+                </div>
+                <p>Rua X, bairro bolinha, Número tal - CEP: 111111-111, Cidade Y, Estado SP</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- RODAPÉ -->
+    <footer class="c-rodape">
+        <div class="c-copyright">
+            Copyright © Soares & Galvão - Papelaria 2020. Todos os direitos reservados.
+        </div>
+    </footer>
+
+
+    <!-- LINK P/ ADIÇÃO DE ÍCONES -->
+    <script src="https://kit.fontawesome.com/1f2f7ecb7d.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
